@@ -6,6 +6,7 @@ edition = "2024"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
+critical-section =          { version = "=1.2.0" }
 embassy-executor =          { version = "=0.10.0" }
 embassy-time =              { version = "=0.5.1" }
 esp-backtrace =             { version = "=0.20.0", features = ["esp32s3", "panic-handler", "println"] }

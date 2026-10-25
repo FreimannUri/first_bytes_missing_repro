@@ -94,8 +94,10 @@ fn sensor_init(i2c: &mut I2c<'_, Blocking>) -> Result<(), I2cError> {
         // io direction
         [0x3017, 0xFF],
         [0x3018, 0xFF],
-        [0x3020, 0xC3], // DRIVE_CAPABILITY
-        [0x3021, 0x21], // CLOCK_POL_CONTROL
+        // [0x3020, 0xC3], // DRIVE_CAPABILITY
+        [0x302C, 0xC3], // DRIVE_CAPABILITY
+        // [0x3021, 0x21], // CLOCK_POL_CONTROL
+        [0x4740, 0x21], // CLOCK_POL_CONTROL
         [0x4713, 0x02], // jpg mode select
         // [0x4713, 0x03],
         [0x5001, 0x83], // ISP_CONTROL_01: turn color matrix, awb and SDE
